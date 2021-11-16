@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html> 
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Editor Imagini</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <link rel="manifest" href="manifest.json">
+    
+</head>
+
+<body style="text-align:center; background-image: linear-gradient(to right, whitesmoke, orange);">
+    <canvas id="processedImage" style="
+        position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+        max-width:100%; width:auto; height: auto; max-height: 600px">
+    </canvas>
+    
+    <div style="
+        background-color: rgba(200,200,200,0.8);
+        padding: 10px;
+        position: fixed; 
+        top:10px; left: 50%; 
+        transform: translate(-50%);">
+        <input type="file" id="fileBrowser" name="fileBrowser" accept="image/*">
+    </div>
+
+    <div style="
+        background-color: rgba(200,200,200,0.8);
+        padding: 10px;
+        position: fixed; 
+        bottom: 10px; left: 50%; 
+        transform: translate(-50%); 
+        margin-right: -50%;">
+
+        <button type="button" style="background-color: whitesmoke;" class="effectType" data-effect="normal">Normal</button>
+        <button type="button" style="background-image: linear-gradient(to right, black, white); color: gray" class="effectType" data-effect="grayscale">Grayscale</button>
+        <button type="button" style="background-color: black; color: darkgrey;"  class="effectType" data-effect="threshold">Threshold</button>
+        <button type="button" style="background-color: rgb(248, 201, 114);" class="effectType" data-effect="sepia">Sepia</button>
+        <button type="button" style="background-color: black; color: white;" class="effectType" data-effect="invert">Invert Colors</button>
+        <button type="button" style="background: rgba(30, 210, 201, 0.507);" class="effectType" data-effect="pixelate">Pixelate</button>
+        <button type="button" style="background-color: pink;" class="effectType" data-effect="twoChannels">2 Channels</button>
+        <button type="button" style="background-color: red;" class="effectType" data-effect="red">Red</button>
+        <button type="button" style="background-color: green;" class="effectType" data-effect="green">Green</button>
+        <button type="button" style="background-color: blue; color: white;" class="effectType" data-effect="blue">Blue</button>
+
+        <a id="downloadLink" href="#" download="processedImage">
+            Download
+        </a>
+    </div>
+
+    <div class="loader" style="display: none">
+        <div id="spinner"></div>
+    </div>
+    <script>
+        app.load();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Editor Imagini",
+  "short_name": "Editor Imagini",
+  "start_url": "index.html",
+  "display": "standalone"
+}
